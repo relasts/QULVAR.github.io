@@ -9,28 +9,27 @@ ul {
 	list-style-type: none;
 }
 
-.container {
-	width: 90%;
-	margin: 30px auto;
-	padding: 20px;
-	background-color: #8F8F8F;
+* {
+	box-sizing: border-box;
 }
 
-#logoImg {
-	float: left;
-	height: 120px;
+.container  {
+	width: 100%;
+	margin: 30px auto;
+}
+
+#table {
+	background-color: #8F8F8F;
 }
 
 header {
 	margin: 0 auto;
 	display: flex;
-	background-color: #5F5F5F;
 	font-size: 40px;
 	align-items: center;
 }
 
-header .container, footer .container{
-	background-color: #5F5F5F !important;
+header .container, footer .container {
 	margin: 0 auto;
 }
 
@@ -42,6 +41,7 @@ header .container, footer .container{
 	display: flex;
 	justify-content: end;
 	padding-right: 20px;
+	background-color: #5F5F5F;
 }
 
 nav {
@@ -50,6 +50,8 @@ nav {
 	text-align: left;
 	display: flex;
 	flex-direction: column;
+	background-color: #5F5F5F;
+	margin-top: 20px;
 }
 
 nav a {
@@ -102,10 +104,27 @@ footer {
 	flex-direction: column;
 }
 
+#img {
+	float: left;
+	padding: 20px;
+	background-color: #5F5F5F;
+	height: 120px;
+	width: 120px;
+}
+
+#logoImg {
+	width: 100%;
+}
+
 @media screen and (orientation: landscape){
 	
 	header .container {
 		display: flex;
+	}
+	
+	header {
+		background-color: #5F5F5F;
+		width: 100%;
 	}
 	
 	#nav {
