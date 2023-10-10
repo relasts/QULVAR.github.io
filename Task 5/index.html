@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Task 5</title>
+	</head>
+	<body>
+		<form>
+			<label>Товар: 
+				<select id="good">
+					<option value="1" price="180000">iPhone 15 Pro Max</option>
+					<option value="2" price="243000">MacBook Pro 16</option>
+					<option value="3" price="70000">Apple Watch Ultra 2</option>
+					<option value="4" price="53000">AirPods Max</option>
+					<option value="5" price="23000">AirPods Pro 2</option>
+					<option value="6" price="17000">AirPods 3</option>
+					<option value="7" price="140000">iPad Pro</option>
+				</select>
+			</label><br>
+			<label>Количество: 
+				<input type="number" id="number">
+			</label><br>
+			<span>Сумма заказа: </span>
+			<span id="sum"></span><br>
+			<input type="submit" id="get_good" value="Офоримить заказ">
+		</form>
+		<script src="form.js"></script>
+	</body>
+</html>
