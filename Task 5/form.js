@@ -6,7 +6,7 @@ window.onload = function () {
 		let good = document.getElementById("good");
 		let count = document.getElementById("number").value;
 		let priceEl = good.options[good.selectedIndex];
-		let price = priceEl.getAttribute("price");
+		let price = priceEl.getAttribute("data-price");
 		let price_field = document.getElementById("sum");
 		
 		if (/^\d+$/.test(count)) {
