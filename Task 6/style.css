@@ -7,13 +7,16 @@
 }
 
 .label {
-    margin-top: 20px;
+    display: block;
+    margin-top: 5px;
 }
 
 #options {
+    display: block;
     margin-top: 20px;
 }
 
 #check {
-    margin-top: 20px;
+    display: block;
+    margin-top: 5px;
 }
