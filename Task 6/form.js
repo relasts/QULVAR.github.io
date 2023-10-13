@@ -1,6 +1,18 @@
 /*jslint browser: true */
 window.onload = function () {
 	
+	function price (good, option) {
+		let count = document.getElementById("number").value;
+		let price = good.getAttribute("value");
+		let price_field = document.getElementById("sum");
+		let pprice = option.getAttribute("value");
+		if (/^\d+$/.test(count)) {
+			price_field.innerHTML = price * count + Number(pprice) + "₽";
+		} else {
+			price_field.innerHTML = "";
+		}
+	}
+
 	let good1 = document.getElementById("good1");
 	let good2 = document.getElementById("good2");
 	let good3 = document.getElementById("good3");
@@ -10,38 +22,26 @@ window.onload = function () {
 	let check_box = document.getElementById("check");
 	
 
-	good1.addEventListener("click", function (e) {
+	good1.addEventListener("click", function () {
 		options.className = "invisible";
 		check_box.className = "invisible";
+		price(good1, option1);
 	});
-	good2.addEventListener("click", function (e) {
+	good2.addEventListener("click", function () {
 		options.className = "visible";
 		check_box.className = "invisible";
+		price(good2, option1);
 	});
-	good3.addEventListener("click", function (e) {
+	good3.addEventListener("click", function () {
 		options.className = "invisible";
 		check_box.className = "visible";
+		price(good3, option1);
+	});
+	option1.addEventListener("change", function () {
+		price(good2, option1);
+	});
+	option2.addEventListener("change", function () {
+		price(good2, option2);
 	});
 
-
-
-
-
-
-
-	
-	let btn_price;
-	btn_price.addEventListener("click", function (e) {
-		e.preventDefault();
-		let good = document.getElementById("good");
-		let count = document.getElementById("number").value;
-		let priceEl = good.options[good.selectedIndex];
-		let price = priceEl.getAttribute("data-price");
-		let price_field = document.getElementById("sum");
-		if (/^\d+$/.test(count)) {
-			price_field.innerHTML = price * count + "₽";
-		} else {
-			price_field.innerHTML = "";
-		}
-	});
 };
