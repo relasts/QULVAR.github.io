@@ -9,7 +9,7 @@ window.onload = function () {
 		if (/^\d+$/.test(count)) {
 			price_field.innerHTML = price * count + Number(pprice) + "₽";
 		} else {
-			price_field.innerHTML = "";
+			price_field.innerHTML = ".";
 		}
 	}
 
